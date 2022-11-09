@@ -1,24 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
-import NotFound from './pages/NotFound';
-import VideoDetail from './pages/VideoDetail';
-import Videos from './pages/Videos';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    errorElement: <NotFound />,
-    children: [
-      { index: true, element: <Videos /> },
-      { path: 'videos', element: <Videos /> },
-      { path: 'videos/:keyword', element: <Videos /> },
-      { path: 'videos/watch/:videoId', element: <VideoDetail /> },
-    ],
-  },
-]);
+import { RouterProvider } from 'react-router-dom';
+import { router } from './components/router';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
