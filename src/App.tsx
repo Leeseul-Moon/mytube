@@ -1,7 +1,12 @@
 import React from 'react';
+import { Outlet } from 'react-router';
 
 function App() {
-  return <div className="App">여기에 앱을 작성해주세요.</div>;
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
 }
 
 export default App;
